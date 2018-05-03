@@ -20,13 +20,18 @@
   <div id="puzzle">
     <svg id="Layer_1" style="width: 100%;" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1518.08 1569.8">
       <defs>
+        <filter id="shadow">
+          <feDropShadow dx="2" dy="4" stdDeviation="2" />
+        </filter>
         <style>
           .puzzle-piece {
             transform-origin: center;
             transform: scale(.90);
           }
+
           .puzzle-piece path {
             fill: #7bc0dd;
+            filter:url(#shadow);
             stroke: #4192b5;
             stroke-width: 4px;
             stroke-miterlimit: 10;
@@ -43,6 +48,7 @@
           .puzzle-piece:hover {
             transform: scale(.91);
           }
+
           .puzzle-piece:hover path {
             fill: #36a6d6;
           }
